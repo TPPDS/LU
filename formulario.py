@@ -7,10 +7,6 @@ from google.oauth2.service_account import Credentials
 from gspread_pandas import Spread, Client
 #Manejo de fechas
 from datetime import datetime
-#Evaluar las listas dentro del DataFrame
-from ast import literal_eval
-#Visualización
-import plotly.graph_objects as go
 #Logo en página
 from PIL import Image
 import urllib.request
