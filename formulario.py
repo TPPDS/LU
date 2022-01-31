@@ -1,8 +1,5 @@
 #======================================================================================
 #======================================================================================
-#Librerias utilizadas
-#Pandas - Limpieza, filtrado de DataFrames
-#Streamlit - Interfaz gráfica
 import pandas as pd
 import streamlit as st
 #Autorización Google spreadsheets (API)
@@ -47,7 +44,7 @@ st.markdown(hide_st_style, unsafe_allow_html = True)
 #======================================================================================
 scope = ['https://spreadsheets.google.com/feeds',
          'https://www.googleapis.com/auth/drive']
-credentials = Credentials.from_service_account_file("./gsheet.json", scopes=scope)
+credentials = Credentials.from_service_account_info(st.secrets["s_g"], scopes=scope)
 client = Client(scope=scope, creds=credentials)
 if 'spread' not in st.session_state:
     st.session_state.spread = Spread("Output_Form", client=client)
