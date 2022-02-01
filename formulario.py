@@ -148,7 +148,7 @@ user = st.sidebar.radio("Seleccionar", ["Nuevo colaborador", "Actualización dat
 #======================================================================================
 #======================================================================================
 rrhh_email = ["rehumanos@tppemarketing.com","rcastro@tppemarketing.com"]
-rrhh_pass = "123"
+rrhh_pass = st.secrets["rh_password"]
 if user == "Nuevo colaborador":
     st.sidebar.success("Uso exclusivo de RRHH")
     email_rrhh = st.sidebar.text_input("Ingresar correo RRHH")
