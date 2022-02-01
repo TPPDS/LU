@@ -635,6 +635,19 @@ if user == "Actualización datos":
                         df_append = pd.DataFrame([[st.session_state.nombres_f, st.session_state.apellidos_f, st.session_state.genero_f, st.session_state.fecha_f, st.session_state.cui, st.session_state.empresa_fill, st.session_state.email_fill, st.session_state.puesto_fill, st.session_state.lugar_d, st.session_state.titulo_d, st.session_state.e_d, st.session_state.lugar_l, st.session_state.titulo_l, st.session_state.e_l, st.session_state.e_ll, st.session_state.lugar_m, st.session_state.titulo_m, st.session_state.e_m, st.session_state.lugar_c, st.session_state.titulo_c, st.session_state.e_c]], columns = name_columns)
                         df = pd.concat([df, df_append], axis = 0)
                         st.session_state.spread.df_to_sheet(df, index = False)
+                        st.session_state.lugar_d = []
+                        st.session_state.titulo_d = []
+                        st.session_state.e_d = []
+                        st.session_state.lugar_l = []
+                        st.session_state.titulo_l = []
+                        st.session_state.e_l = []
+                        st.session_state.e_ll = []
+                        st.session_state.lugar_m = []
+                        st.session_state.titulo_m = []
+                        st.session_state.e_m = []
+                        st.session_state.lugar_c = []
+                        st.session_state.titulo_c = []
+                        st.session_state.e_c = []
                         st.balloons()
                 
                 c_aa, c_bb, c_cc, c_dd, c_ee, c_ff, c_gg, c_hh, c_ii, c_jj, c_kk, c_ll = st.columns([1,1.5,1,1,1,1,1,1,1,1,1,1])
