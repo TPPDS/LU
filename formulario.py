@@ -5,6 +5,7 @@ import streamlit as st
 #Autorización Google spreadsheets (API)
 from google.oauth2.service_account import Credentials
 from gspread_pandas import Spread, Client
+from ast import literal_eval
 #Manejo de fechas
 from datetime import datetime
 #Logo en página
