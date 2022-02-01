@@ -163,7 +163,7 @@ if user == "Nuevo colaborador":
             nombres = c_1.text_input("Nombres")
             apellidos = c_1.text_input("Apellidos")
             genero = c_1.selectbox("Género", ["F", "M"])
-            fecha = c_2.date_input("Fecha de nacimiento - YY/MM/DD", datetime.date(1999,12,31))
+            fecha = c_2.date_input("Fecha de nacimiento - YY/MM/DD")
             cui = c_2.text_input("CUI (no guiones ni espacios)")
             empresa = c_3.multiselect("Empresa/Hub", e_hub)
             email = c_3.text_input("Correo Electrónico")
