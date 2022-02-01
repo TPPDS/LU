@@ -318,9 +318,9 @@ if user == "Actualización datos":
     cui_prefill = st.sidebar.text_input("Ingresar CUI (sin espacios ni guiones)", type = "password")
     if email_prefill and cui_prefill:
         try:
-          info = df[df["Email"] == email_prefill].tail(1)
+            info = df[df["Email"] == email_prefill].tail(1)
         except:
-          st.warning("Correo no registrado")
+            st.warning("Correo no registrado")
         if info["CUI"].values[0] != cui_prefill:
             st.sidebar.error("Credenciales incorrectas")
         else:
