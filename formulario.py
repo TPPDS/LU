@@ -396,7 +396,7 @@ if user == "Actualización datos":
                         gender_index = 1
                     st.session_state.genero_f = p_genero.selectbox("Género", ff_gen, index = gender_index, key = "genero_ff")
                     print(st.session_state.genero_f)
-                    st.session_state.fecha_f = p_fecha.date_input("Fecha de nacimiento - YY/MM/DD", key = "fecha_fill", value = datetime.strptime(str(st.session_state.fecha_f), '%Y-%m-%d'))
+                    st.session_state.fecha_f = p_fecha.date_input("Fecha de nacimiento - YY/MM/DD", key = "fecha_fill", value = datetime.strptime(st.session_state.fecha_f, '%Y-%m-%d'))
                     pp_CUI.markdown("CUI")
                     p_CUI.info(st.session_state.cui)
                     st.session_state.empresa_fill = p_empresa.multiselect("Empresa/Hub", e_hub, default = st.session_state.empresa_fill)
