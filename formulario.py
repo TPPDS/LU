@@ -293,7 +293,7 @@ if user == "Nuevo colaborador":
             #===================================================================
             #===================================================================
             if st.button("Guardar Información", key = 1):
-                df = st.session_state.spread.sheet_to_df()
+                df = st.session_state.spread.sheet_to_df().reset_index()
                 df_append = pd.DataFrame([[nombres, apellidos, genero, fecha, cui, empresa, email, puesto, st.session_state.lugar_d, st.session_state.titulo_d, st.session_state.e_d, st.session_state.lugar_l, st.session_state.titulo_l, st.session_state.e_l, st.session_state.e_ll, st.session_state.lugar_m, st.session_state.titulo_m, st.session_state.e_m, st.session_state.lugar_c, st.session_state.titulo_c, st.session_state.e_c]], columns = name_columns)
                 df = pd.concat([df, df_append], axis = 0)
                 st.session_state.spread.df_to_sheet(df, index = False)
