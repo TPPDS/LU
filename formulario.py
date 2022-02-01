@@ -2,17 +2,20 @@
 #======================================================================================
 import pandas as pd
 import streamlit as st
-#Autorización Google spreadsheets (API)
+#--------------------------------------------------------------------------------------
 from google.oauth2.service_account import Credentials
 from gspread_pandas import Spread, Client
+#--------------------------------------------------------------------------------------
 from ast import literal_eval
-#Manejo de fechas
+#--------------------------------------------------------------------------------------
 from datetime import datetime
-#Logo en página
+#--------------------------------------------------------------------------------------
 from PIL import Image
 import urllib.request
 #--------------------------------------------------------------------------------------
-#--------------------------------------------------------------------------------------
+import plotly.graph_objects as go
+#======================================================================================
+#======================================================================================
 #Listas para utilizas en el documento
 #Empresa/Hub
 e_hub = sorted(["EasyGo","Lets Advertise","Administración","RRHH","TPP","TPP Extreme","TPP Fénix","TPP ULTRA","TOM"])
